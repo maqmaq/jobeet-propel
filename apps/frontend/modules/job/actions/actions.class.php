@@ -14,11 +14,14 @@ class jobActions extends sfActions
     $this->jobeet_job_list = JobeetJobPeer::doSelect(new Criteria());
   }
 
-public function executeShow(sfWebRequest $request)
-{
-  $this->job = JobeetJobPeer::retrieveByPk($request->getParameter('id'));
-  $this->forward404Unless($this->job);
-}
+  public function executeShow(sfWebRequest $request)
+  {
+    $this->job = $this->getRoute()->getObject();
+  }
+
+
+
+
 
   public function executeNew(sfWebRequest $request)
   {
