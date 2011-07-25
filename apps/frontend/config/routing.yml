@@ -8,6 +8,7 @@ job_show_user:
   class:   sfPropelRoute
   options: { model: JobeetJob, type: object }
   param:   { module: job, action: show }
+  method_for_criteria: doSelectActive
   requirements:
     id: \d+
     sf_method: [get]
