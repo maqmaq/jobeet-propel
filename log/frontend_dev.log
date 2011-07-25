@@ -5687,3 +5687,181 @@ Jul 25 13:57:07 symfony [info] {sfWebDebugLogger} Configuration 1.58 ms (9)
 Jul 25 13:57:07 symfony [info] {sfWebDebugLogger} Action "job/index" 17.76 ms (1)
 Jul 25 13:57:07 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 19.42 ms (1)
 Jul 25 13:57:07 symfony [info] {sfWebResponse} Send content (33386 o)
+Jul 25 13:58:25 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job" (/job.:sf_format)
+Jul 25 13:58:25 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_new" (/job/new.:sf_format)
+Jul 25 13:58:25 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_create" (/job.:sf_format)
+Jul 25 13:58:25 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_edit" (/job/:id/edit.:sf_format)
+Jul 25 13:58:25 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_update" (/job/:id.:sf_format)
+Jul 25 13:58:25 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_delete" (/job/:id.:sf_format)
+Jul 25 13:58:25 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_show" (/job/:id.:sf_format)
+Jul 25 13:58:25 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_show_user" (/job/:company_slug/:location_slug/:id/:position_slug)
+Jul 25 13:58:25 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jul 25 13:58:25 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Jul 25 13:58:25 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 25 13:58:25 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jul 25 13:58:25 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 25 13:58:25 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Jul 25 13:58:25 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Jul 25 13:58:25 symfony [debug] {sfPropelLogger} prepare: SELECT DISTINCT  jobeet_category.ID, jobeet_category.NAME FROM `jobeet_category`, `jobeet_job` WHERE jobeet_job.EXPIRES_AT>:p1 AND jobeet_category.ID=jobeet_job.CATEGORY_ID
+Jul 25 13:58:25 symfony [debug] {sfPropelLogger} Binding '2011-07-25 13:58:25' at position :p1 w/ PDO type PDO::PARAM_STR
+Jul 25 13:58:25 symfony [info] {sfPHPView} Render "/home/mmackows/sfprojects/jobeet/apps/frontend/modules/job/templates/indexSuccess.php"
+Jul 25 13:58:25 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job` WHERE jobeet_job.CATEGORY_ID=:p1 AND jobeet_job.EXPIRES_AT>:p2 ORDER BY jobeet_job.EXPIRES_AT DESC LIMIT 5
+Jul 25 13:58:25 symfony [debug] {sfPropelLogger} Binding 41 at position :p1 w/ PDO type PDO::PARAM_INT
+Jul 25 13:58:25 symfony [debug] {sfPropelLogger} Binding '2011-07-25 13:58:25' at position :p2 w/ PDO type PDO::PARAM_STR
+Jul 25 13:58:25 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job` WHERE jobeet_job.CATEGORY_ID=:p1 AND jobeet_job.EXPIRES_AT>:p2 ORDER BY jobeet_job.EXPIRES_AT DESC LIMIT 5
+Jul 25 13:58:25 symfony [debug] {sfPropelLogger} Binding 42 at position :p1 w/ PDO type PDO::PARAM_INT
+Jul 25 13:58:25 symfony [debug] {sfPropelLogger} Binding '2011-07-25 13:58:25' at position :p2 w/ PDO type PDO::PARAM_STR
+Jul 25 13:58:25 symfony [info] {sfPHPView} Decorate content with "/home/mmackows/sfprojects/jobeet/apps/frontend/templates/layout.php"
+Jul 25 13:58:25 symfony [info] {sfPHPView} Render "/home/mmackows/sfprojects/jobeet/apps/frontend/templates/layout.php"
+Jul 25 13:58:25 symfony [info] {main} Get slot "title"
+Jul 25 13:58:25 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 25 13:58:25 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 25 13:58:25 symfony [info] {sfWebDebugLogger} Configuration 1.43 ms (9)
+Jul 25 13:58:25 symfony [info] {sfWebDebugLogger} Action "job/index" 16.93 ms (1)
+Jul 25 13:58:25 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 17.63 ms (1)
+Jul 25 13:58:25 symfony [info] {sfWebResponse} Send content (33386 o)
+Jul 25 13:58:26 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job" (/job.:sf_format)
+Jul 25 13:58:26 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_new" (/job/new.:sf_format)
+Jul 25 13:58:26 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_create" (/job.:sf_format)
+Jul 25 13:58:26 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_edit" (/job/:id/edit.:sf_format)
+Jul 25 13:58:26 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_update" (/job/:id.:sf_format)
+Jul 25 13:58:26 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_delete" (/job/:id.:sf_format)
+Jul 25 13:58:26 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_show" (/job/:id.:sf_format)
+Jul 25 13:58:26 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_show_user" (/job/:company_slug/:location_slug/:id/:position_slug)
+Jul 25 13:58:26 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jul 25 13:58:26 symfony [info] {sfPatternRouting} Match route "homepage" (/) for / with parameters array (  'module' => 'job',  'action' => 'index',)
+Jul 25 13:58:26 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 25 13:58:26 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jul 25 13:58:26 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 25 13:58:26 symfony [info] {jobActions} Call "jobActions->executeIndex()"
+Jul 25 13:58:26 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Jul 25 13:58:26 symfony [debug] {sfPropelLogger} prepare: SELECT DISTINCT  jobeet_category.ID, jobeet_category.NAME FROM `jobeet_category`, `jobeet_job` WHERE jobeet_job.EXPIRES_AT>:p1 AND jobeet_category.ID=jobeet_job.CATEGORY_ID
+Jul 25 13:58:26 symfony [debug] {sfPropelLogger} Binding '2011-07-25 13:58:26' at position :p1 w/ PDO type PDO::PARAM_STR
+Jul 25 13:58:26 symfony [info] {sfPHPView} Render "/home/mmackows/sfprojects/jobeet/apps/frontend/modules/job/templates/indexSuccess.php"
+Jul 25 13:58:26 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job` WHERE jobeet_job.CATEGORY_ID=:p1 AND jobeet_job.EXPIRES_AT>:p2 ORDER BY jobeet_job.EXPIRES_AT DESC LIMIT 5
+Jul 25 13:58:26 symfony [debug] {sfPropelLogger} Binding 41 at position :p1 w/ PDO type PDO::PARAM_INT
+Jul 25 13:58:26 symfony [debug] {sfPropelLogger} Binding '2011-07-25 13:58:26' at position :p2 w/ PDO type PDO::PARAM_STR
+Jul 25 13:58:26 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job` WHERE jobeet_job.CATEGORY_ID=:p1 AND jobeet_job.EXPIRES_AT>:p2 ORDER BY jobeet_job.EXPIRES_AT DESC LIMIT 5
+Jul 25 13:58:26 symfony [debug] {sfPropelLogger} Binding 42 at position :p1 w/ PDO type PDO::PARAM_INT
+Jul 25 13:58:26 symfony [debug] {sfPropelLogger} Binding '2011-07-25 13:58:26' at position :p2 w/ PDO type PDO::PARAM_STR
+Jul 25 13:58:26 symfony [info] {sfPHPView} Decorate content with "/home/mmackows/sfprojects/jobeet/apps/frontend/templates/layout.php"
+Jul 25 13:58:26 symfony [info] {sfPHPView} Render "/home/mmackows/sfprojects/jobeet/apps/frontend/templates/layout.php"
+Jul 25 13:58:26 symfony [info] {main} Get slot "title"
+Jul 25 13:58:26 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 25 13:58:26 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 25 13:58:26 symfony [info] {sfWebDebugLogger} Configuration 1.54 ms (9)
+Jul 25 13:58:26 symfony [info] {sfWebDebugLogger} Action "job/index" 15.28 ms (1)
+Jul 25 13:58:26 symfony [info] {sfWebDebugLogger} View "Success" for "job/index" 20.12 ms (1)
+Jul 25 13:58:26 symfony [info] {sfWebResponse} Send content (33386 o)
+Jul 25 13:58:28 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job" (/job.:sf_format)
+Jul 25 13:58:28 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_new" (/job/new.:sf_format)
+Jul 25 13:58:28 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_create" (/job.:sf_format)
+Jul 25 13:58:28 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_edit" (/job/:id/edit.:sf_format)
+Jul 25 13:58:28 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_update" (/job/:id.:sf_format)
+Jul 25 13:58:28 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_delete" (/job/:id.:sf_format)
+Jul 25 13:58:28 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_show" (/job/:id.:sf_format)
+Jul 25 13:58:28 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_show_user" (/job/:company_slug/:location_slug/:id/:position_slug)
+Jul 25 13:58:28 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jul 25 13:58:28 symfony [info] {sfPatternRouting} Match route "job_show_user" (/job/:company_slug/:location_slug/:id/:position_slug) for /job/company-zero/paris-france/137/web-developer with parameters array (  'module' => 'job',  'action' => 'show',  'company_slug' => 'company-zero',  'location_slug' => 'paris-france',  'id' => '137',  'position_slug' => 'web-developer',)
+Jul 25 13:58:28 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 25 13:58:28 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jul 25 13:58:28 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 25 13:58:28 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Jul 25 13:58:28 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Jul 25 13:58:28 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job` WHERE jobeet_job.ID=:p1 LIMIT 1
+Jul 25 13:58:28 symfony [debug] {sfPropelLogger} Binding '137' at position :p1 w/ PDO type PDO::PARAM_INT
+Jul 25 13:58:28 symfony [info] {sfPHPView} Render "/home/mmackows/sfprojects/jobeet/apps/frontend/modules/job/templates/showSuccess.php"
+Jul 25 13:58:28 symfony [info] {main} Set slot "title"
+Jul 25 13:58:28 symfony [info] {sfPHPView} Decorate content with "/home/mmackows/sfprojects/jobeet/apps/frontend/templates/layout.php"
+Jul 25 13:58:28 symfony [info] {sfPHPView} Render "/home/mmackows/sfprojects/jobeet/apps/frontend/templates/layout.php"
+Jul 25 13:58:28 symfony [info] {main} Get slot "title"
+Jul 25 13:58:28 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 25 13:58:28 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 25 13:58:28 symfony [info] {sfWebDebugLogger} Configuration 1.64 ms (9)
+Jul 25 13:58:28 symfony [info] {sfWebDebugLogger} Action "job/show" 15.08 ms (1)
+Jul 25 13:58:28 symfony [info] {sfWebDebugLogger} View "Success" for "job/show" 10.93 ms (1)
+Jul 25 13:58:28 symfony [info] {sfWebResponse} Send content (31341 o)
+Jul 25 13:58:33 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job" (/job.:sf_format)
+Jul 25 13:58:33 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_new" (/job/new.:sf_format)
+Jul 25 13:58:33 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_create" (/job.:sf_format)
+Jul 25 13:58:33 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_edit" (/job/:id/edit.:sf_format)
+Jul 25 13:58:33 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_update" (/job/:id.:sf_format)
+Jul 25 13:58:33 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_delete" (/job/:id.:sf_format)
+Jul 25 13:58:33 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_show" (/job/:id.:sf_format)
+Jul 25 13:58:33 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_show_user" (/job/:company_slug/:location_slug/:id/:position_slug)
+Jul 25 13:58:33 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jul 25 13:58:33 symfony [info] {sfPatternRouting} Match route "job_show_user" (/job/:company_slug/:location_slug/:id/:position_slug) for /job/company-100/paris-france/106/web-developer with parameters array (  'module' => 'job',  'action' => 'show',  'company_slug' => 'company-100',  'location_slug' => 'paris-france',  'id' => '106',  'position_slug' => 'web-developer',)
+Jul 25 13:58:33 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 25 13:58:33 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jul 25 13:58:33 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 25 13:58:33 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Jul 25 13:58:33 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Jul 25 13:58:33 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job` WHERE jobeet_job.ID=:p1 LIMIT 1
+Jul 25 13:58:33 symfony [debug] {sfPropelLogger} Binding '106' at position :p1 w/ PDO type PDO::PARAM_INT
+Jul 25 13:58:33 symfony [info] {sfPHPView} Render "/home/mmackows/sfprojects/jobeet/apps/frontend/modules/job/templates/showSuccess.php"
+Jul 25 13:58:33 symfony [info] {main} Set slot "title"
+Jul 25 13:58:33 symfony [info] {sfPHPView} Decorate content with "/home/mmackows/sfprojects/jobeet/apps/frontend/templates/layout.php"
+Jul 25 13:58:33 symfony [info] {sfPHPView} Render "/home/mmackows/sfprojects/jobeet/apps/frontend/templates/layout.php"
+Jul 25 13:58:33 symfony [info] {main} Get slot "title"
+Jul 25 13:58:33 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 25 13:58:33 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 25 13:58:33 symfony [info] {sfWebDebugLogger} Configuration 1.38 ms (9)
+Jul 25 13:58:33 symfony [info] {sfWebDebugLogger} Action "job/show" 15.15 ms (1)
+Jul 25 13:58:33 symfony [info] {sfWebDebugLogger} View "Success" for "job/show" 8.72 ms (1)
+Jul 25 13:58:33 symfony [info] {sfWebResponse} Send content (31330 o)
+Jul 25 13:58:36 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job" (/job.:sf_format)
+Jul 25 13:58:36 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_new" (/job/new.:sf_format)
+Jul 25 13:58:36 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_create" (/job.:sf_format)
+Jul 25 13:58:36 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_edit" (/job/:id/edit.:sf_format)
+Jul 25 13:58:36 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_update" (/job/:id.:sf_format)
+Jul 25 13:58:36 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_delete" (/job/:id.:sf_format)
+Jul 25 13:58:36 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_show" (/job/:id.:sf_format)
+Jul 25 13:58:36 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_show_user" (/job/:company_slug/:location_slug/:id/:position_slug)
+Jul 25 13:58:36 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jul 25 13:58:36 symfony [info] {sfPatternRouting} Match route "job_show_user" (/job/:company_slug/:location_slug/:id/:position_slug) for /job/company-zero/paris-france/137/web-developer with parameters array (  'module' => 'job',  'action' => 'show',  'company_slug' => 'company-zero',  'location_slug' => 'paris-france',  'id' => '137',  'position_slug' => 'web-developer',)
+Jul 25 13:58:36 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 25 13:58:36 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jul 25 13:58:36 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 25 13:58:36 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Jul 25 13:58:36 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Jul 25 13:58:36 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job` WHERE jobeet_job.ID=:p1 LIMIT 1
+Jul 25 13:58:36 symfony [debug] {sfPropelLogger} Binding '137' at position :p1 w/ PDO type PDO::PARAM_INT
+Jul 25 13:58:36 symfony [info] {sfPHPView} Render "/home/mmackows/sfprojects/jobeet/apps/frontend/modules/job/templates/showSuccess.php"
+Jul 25 13:58:36 symfony [info] {main} Set slot "title"
+Jul 25 13:58:36 symfony [info] {sfPHPView} Decorate content with "/home/mmackows/sfprojects/jobeet/apps/frontend/templates/layout.php"
+Jul 25 13:58:36 symfony [info] {sfPHPView} Render "/home/mmackows/sfprojects/jobeet/apps/frontend/templates/layout.php"
+Jul 25 13:58:36 symfony [info] {main} Get slot "title"
+Jul 25 13:58:36 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 25 13:58:36 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 25 13:58:36 symfony [info] {sfWebDebugLogger} Configuration 1.40 ms (9)
+Jul 25 13:58:36 symfony [info] {sfWebDebugLogger} Action "job/show" 12.69 ms (1)
+Jul 25 13:58:36 symfony [info] {sfWebDebugLogger} View "Success" for "job/show" 15.17 ms (1)
+Jul 25 13:58:36 symfony [info] {sfWebResponse} Send content (31341 o)
+Jul 25 13:58:42 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job" (/job.:sf_format)
+Jul 25 13:58:42 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_new" (/job/new.:sf_format)
+Jul 25 13:58:42 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_create" (/job.:sf_format)
+Jul 25 13:58:42 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_edit" (/job/:id/edit.:sf_format)
+Jul 25 13:58:42 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_update" (/job/:id.:sf_format)
+Jul 25 13:58:42 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_delete" (/job/:id.:sf_format)
+Jul 25 13:58:42 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_show" (/job/:id.:sf_format)
+Jul 25 13:58:42 symfony [info] {sfPatternRouting} Connect sfPropelRoute "job_show_user" (/job/:company_slug/:location_slug/:id/:position_slug)
+Jul 25 13:58:42 symfony [info] {sfPatternRouting} Connect sfRoute "homepage" (/)
+Jul 25 13:58:42 symfony [info] {sfPatternRouting} Match route "job_show_user" (/job/:company_slug/:location_slug/:id/:position_slug) for /job/company-102/paris-france/108/web-developer with parameters array (  'module' => 'job',  'action' => 'show',  'company_slug' => 'company-102',  'location_slug' => 'paris-france',  'id' => '108',  'position_slug' => 'web-developer',)
+Jul 25 13:58:42 symfony [info] {sfFilterChain} Executing filter "sfRenderingFilter"
+Jul 25 13:58:42 symfony [info] {sfFilterChain} Executing filter "sfCommonFilter"
+Jul 25 13:58:42 symfony [info] {sfFilterChain} Executing filter "sfExecutionFilter"
+Jul 25 13:58:42 symfony [info] {jobActions} Call "jobActions->executeShow()"
+Jul 25 13:58:42 symfony [debug] {sfPropelLogger} exec: SET NAMES 'utf8'
+Jul 25 13:58:42 symfony [debug] {sfPropelLogger} prepare: SELECT jobeet_job.ID, jobeet_job.CATEGORY_ID, jobeet_job.TYPE, jobeet_job.COMPANY, jobeet_job.LOGO, jobeet_job.URL, jobeet_job.POSITION, jobeet_job.LOCATION, jobeet_job.DESCRIPTION, jobeet_job.HOW_TO_APPLY, jobeet_job.TOKEN, jobeet_job.IS_PUBLIC, jobeet_job.IS_ACTIVATED, jobeet_job.EMAIL, jobeet_job.EXPIRES_AT, jobeet_job.CREATED_AT, jobeet_job.UPDATED_AT FROM `jobeet_job` WHERE jobeet_job.ID=:p1 LIMIT 1
+Jul 25 13:58:42 symfony [debug] {sfPropelLogger} Binding '108' at position :p1 w/ PDO type PDO::PARAM_INT
+Jul 25 13:58:42 symfony [info] {sfPHPView} Render "/home/mmackows/sfprojects/jobeet/apps/frontend/modules/job/templates/showSuccess.php"
+Jul 25 13:58:42 symfony [info] {main} Set slot "title"
+Jul 25 13:58:42 symfony [info] {sfPHPView} Decorate content with "/home/mmackows/sfprojects/jobeet/apps/frontend/templates/layout.php"
+Jul 25 13:58:42 symfony [info] {sfPHPView} Render "/home/mmackows/sfprojects/jobeet/apps/frontend/templates/layout.php"
+Jul 25 13:58:42 symfony [info] {main} Get slot "title"
+Jul 25 13:58:42 symfony [info] {sfWebResponse} Send status "HTTP/1.1 200 OK"
+Jul 25 13:58:42 symfony [info] {sfWebResponse} Send header "Content-Type: text/html; charset=utf-8"
+Jul 25 13:58:42 symfony [info] {sfWebDebugLogger} Configuration 1.43 ms (9)
+Jul 25 13:58:42 symfony [info] {sfWebDebugLogger} Action "job/show" 15.37 ms (1)
+Jul 25 13:58:42 symfony [info] {sfWebDebugLogger} View "Success" for "job/show" 9.96 ms (1)
+Jul 25 13:58:42 symfony [info] {sfWebResponse} Send content (31330 o)
